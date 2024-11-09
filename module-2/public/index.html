@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felhasználók CRUD Alkalmazás</title>
+  <style>
+    body{
+      background-image: linear-gradient(gray,white,gray);
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Felhasználók CRUD Alkalmazás</h1>
+
+  <!-- Felhasználók listázása -->
+  <button onclick="getUsers()">Összes felhasználó megtekintése</button>
+  <pre id="userList"></pre>
+
+  <!-- Felhasználó létrehozása -->
+  <h2>Felhasználó létrehozása</h2>
+  <form id="createUserForm">
+    <label for="name">Név:</label>
+    <input type="text" id="name" required />
+    <label for="email">Email:</label>
+    <input type="email" id="email" required />
+    <button type="button" onclick="createUser()">Létrehozás</button>
+  </form>
+<!-- Felhasználó adatainak betöltése szerkesztéshez -->
+<h2>Felhasználó adatainak betöltése szerkesztéshez</h2>
+<input type="text" id="editUserId" placeholder="Felhasználó ID" required>
+<button type="button" onclick="loadUserForEdit()">Adatok betöltése</button>
+
+  <!-- Felhasználó szerkesztése -->
+  <h2>Felhasználó szerkesztése</h2>
+  <form id="updateUserForm">
+    <label for="updateId">ID:</label>
+    <input type="text" id="updateId" required />
+    <label for="updateName">Név:</label>
+    <input type="text" id="updateName" required />
+    <label for="updateEmail">Email:</label>
+    <input type="email" id="updateEmail" required />
+    <button type="button" onclick="updateUser()">Szerkesztés</button>
+  </form>
+
+  <!-- Felhasználó törlése -->
+  <h2>Felhasználó törlése</h2>
+  <form id="deleteUserForm">
+    <label for="deleteId">ID:</label>
+    <input type="text" id="deleteId" required />
+    <button type="button" onclick="deleteUser()">Törlés</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
