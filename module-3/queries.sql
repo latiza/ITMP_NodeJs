@@ -1,10 +1,15 @@
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT,
-  email TEXT
+  id INT PRIMARY KEY AUTO_INCREMENT,  -- AUTO_INCREMENT helyesen
+  name VARCHAR(255),                  -- VARCHAR a TEXT helyett
+  email VARCHAR(255)
 );
+
+-- Példa adatok beszúrása
+INSERT INTO users (name, email) VALUES ('John Doe', 'john.doe@example.com');
+INSERT INTO users (name, email) VALUES ('Jane Smith', 'jane.smith@example.com');
+INSERT INTO users (name, email) VALUES ('Sam Johnson', 'sam.johnson@example.com');
 
 SELECT * FROM users;
 
